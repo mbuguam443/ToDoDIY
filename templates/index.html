@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+ {% block title %} ToDo {% endblock %}
+ {% block content %}
+    <div class="container">
+        <form method="post" action="{% url 'submit' %}">
+            {% csrf_token %}
+            <div class="row mt-5">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Title">Title</label>
+                        <div class="form-control">
+                            <input type="text" name="Title" id="" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <div class="form-control">
+                            <textarea name="Description" id="" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Priority">Priority</label>
+                        <div class="form-control">
+                            <input type="number" name="Priority" id="" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+
+                        <div class="form-control">
+                            <input type="submit" class="btn btn-primary"  id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </form>
+    </div>
+  {% endblock %}
