@@ -1,8 +1,6 @@
 *.pyc
 __pycache__/
-db.sqlite3
-.env
+/.env
 *.env
-/staticfiles/
-/media/
-/myenv/
+/staticfiles/        # keep this ignored
+/myenv/              # keep this ignored
